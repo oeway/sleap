@@ -267,6 +267,10 @@ class CommandContext:
         """Imports DeepLabCut datasets."""
         self.execute(ImportDeepLabCut)
 
+    def importImJoy(self):
+        """Imports ImJoy datasets."""
+        self.execute(ImportImJoy)
+
     def importDLCFolder(self):
         """Imports multiple DeepLabCut datasets."""
         self.execute(ImportDeepLabCutFolder)
@@ -728,6 +732,35 @@ class ImportDeepLabCut(AppCommand):
             context.app,
             dir=None,
             caption="Import DeepLabCut dataset...",
+            filter=";;".join(filters),
+        )
+
+        if len(filename) == 0:
+            return False
+
+        params["filename"] = filename
+
+        return True
+
+
+class ImportImJoy(AppCommand):
+    @staticmethod
+    def do_action(context: "CommandContext", params: dict):
+
+        labels = Labels.load_imjoy(filename=params["filename"])
+
+        new_window = context.app.__class__()
+        new_window.showMaximized()
+        new_window.loadLabelsObject(labels=labels)
+
+    @staticmethod
+    def ask(context: "CommandContext", params: dict) -> bool:
+        filters = ["ImJoy dataset (*.json)"]
+
+        filename, selected_filter = FileDialog.open(
+            context.app,
+            dir=None,
+            caption="Import ImJoy dataset...",
             filter=";;".join(filters),
         )
 

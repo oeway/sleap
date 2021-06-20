@@ -1866,6 +1866,12 @@ class Labels(MutableSequence):
         return read(filename, for_object="labels", as_format="deeplabcut")
 
     @classmethod
+    def load_imjoy(cls, filename: str) -> "Labels":
+        from .format import read
+
+        return read(filename, for_object="labels", as_format="imjoy")
+
+    @classmethod
     def load_deeplabcut_folder(cls, filename: str) -> "Labels":
         csv_files = glob(f"{filename}/*/*.csv")
         merged_labels = None

@@ -347,6 +347,12 @@ class MainWindow(QMainWindow):
         )
         add_menu_item(
             import_types_menu,
+            "import_imjoy",
+            "ImJoy datasets...",
+            self.commands.importImJoy,
+        )
+        add_menu_item(
+            import_types_menu,
             "import_dpk",
             "DeepPoseKit dataset...",
             self.commands.importDPK,

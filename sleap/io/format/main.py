@@ -35,6 +35,7 @@ also a non-default file extension for the `LabelsV1Adaptor` adaptor.
 
 from .coco import LabelsCocoAdaptor
 from .deeplabcut import LabelsDeepLabCutCsvAdaptor, LabelsDeepLabCutYamlAdaptor
+from .imjoy_annotation import LabelsImJoyAdaptor
 from .deepposekit import LabelsDeepPoseKitAdaptor
 from .hdf5 import LabelsV1Adaptor
 from .labels_json import LabelsJsonAdaptor
@@ -47,7 +48,7 @@ from typing import Text, Optional, Union
 
 
 # Default adaptors to use when input/output format isn't specified.
-default_labels_adaptors = [LabelsV1Adaptor, LabelsJsonAdaptor]
+default_labels_adaptors = [LabelsImJoyAdaptor, LabelsV1Adaptor, LabelsJsonAdaptor]
 
 # All supported adaptors for reading and/or writing SLEAP datasets.
 # Key is string used to specify format (`as_format` param), value is either an
@@ -58,6 +59,7 @@ all_labels_adaptors = {
     "json": LabelsJsonAdaptor,
     "leap": LabelsLeapMatlabAdaptor,
     "deeplabcut": (LabelsDeepLabCutYamlAdaptor, LabelsDeepLabCutCsvAdaptor),
+    "imjoy": (LabelsDeepLabCutYamlAdaptor, LabelsImJoyAdaptor),
     "deepposekit": LabelsDeepPoseKitAdaptor,
     "coco": LabelsCocoAdaptor,
     "analysis": SleapAnalysisAdaptor,

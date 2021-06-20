@@ -95,7 +95,9 @@ class Dispatch(object):
             from .hdf5 import LabelsV1Adaptor
             from .labels_json import LabelsJsonAdaptor
             from .deeplabcut import LabelsDeepLabCutCsvAdaptor
+            from .imjoy_annotation import LabelsImJoyAdaptor
 
+            dispatcher.register(LabelsImJoyAdaptor())
             dispatcher.register(LabelsV1Adaptor())
             dispatcher.register(LabelsJsonAdaptor())
             dispatcher.register(LabelsDeepLabCutCsvAdaptor())
