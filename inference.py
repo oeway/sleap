@@ -11,9 +11,9 @@ predictor = TopDownPredictor.from_trained_models(
 from sleap.io.dataset import Labels
 from sleap.nn.viz import plot_img, plot_confmaps, plot_peaks, plot_pafs
 
-# labels_train = Labels.load_imjoy(filename='/data/wei/actin-comet-tail/manifest.json', group='train')
 labels_gt = Labels.load_imjoy(filename='/data/wei/actin-comet-tail/valid/manifest.json')
-labels_pr = predictor.predict(labels_gt.video)
+labels_pr = predictor.predict(labels_gt)
+
 
 def visualize_example(frame_pred, frame_gt, show_labels=True):
     img = frame_gt.image
@@ -31,7 +31,10 @@ def visualize_example(frame_pred, frame_gt, show_labels=True):
             # plot_confmaps(cms, output_scale=cms.shape[0] / img.shape[0])
             plot_peaks(pts_gt, pts_pr, paired=True)
     return fig
-    
+
+
+print("Saving results...")
+os.makedirs(f'{model_dir}/validation', exist_ok=True)
 for frame_pred, frame_gt in zip(labels_pr.labeled_frames, labels_gt.labeled_frames):
     figure = visualize_example(frame_pred, frame_gt, True)
     figure.savefig(f'{model_dir}/validation/output_{frame_gt.frame_idx}.png', format="png", pad_inches=0)
