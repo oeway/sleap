@@ -103,7 +103,7 @@ def plot_peaks(
             handles.append(
                 ax.plot([p_gt[0], p_pr[0]], [p_gt[1], p_pr[1]], "r-", alpha=0.5, lw=2)
             )
-    if pts_pr is not None:
+    if pts_pr is not None and pts_pr.size > 0:
         handles.append(
             ax.plot(
                 pts_gt[..., 0].ravel(),

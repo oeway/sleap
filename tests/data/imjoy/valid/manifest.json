@@ -1,0 +1,125 @@
+{
+    "config": {
+        "flipud": true,
+        "channel_index": 0
+    },
+    "samples": [
+        {
+            "sample_id": "KO EGD 6hpi 091219 06",
+            "target_version": "all",
+            "status": {
+                "sample_id": "KO EGD 6hpi 091219 06",
+                "users": {
+                    "auth0|6091401e7041550068ed3421": 0
+                },
+                "actions": [
+                    {
+                        "session_id": "KO EGD 6hpi 091219 06@v1",
+                        "target_version": "v1",
+                        "task_id": "actin-comet-tail",
+                        "sample_id": "KO EGD 6hpi 091219 06",
+                        "user_id": "auth0|6091401e7041550068ed3421",
+                        "user_email": "yifeng-zhang@uiowa.edu",
+                        "expires_at": 1620146490,
+                        "started_at": 1620142890,
+                        "completed": true,
+                        "completed_at": "04/05/2021 15:48:06",
+                        "metadata": null
+                    }
+                ],
+                "completed": true,
+                "completed_at": "04/05/2021 15:48:06"
+            },
+            "input_files": {
+                "image.png": "https://imjoy-s3.pasteur.fr/imjoy/actin-comet-tail/KO%20EGD%206hpi%20091219%2006/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=imjoy%2F20210619%2FEU%2Fs3%2Faws4_request&X-Amz-Date=20210619T201944Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3c58f1c371dd210891150d11fe8ecfd181332c0452899c69f62a990f1ebbe283"
+            },
+            "target_files": {
+                "annotation.json": {
+                    "v1": "https://imjoy-s3.pasteur.fr/imjoy/actin-comet-tail/KO%20EGD%206hpi%20091219%2006/actin-comet-tail/v1/annotation.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=imjoy%2F20210619%2FEU%2Fs3%2Faws4_request&X-Amz-Date=20210619T201944Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3aa766a9b4a4e5edad5735e9772c5e02e1ff0744c8d871cb50d3296082782689"
+                }
+            },
+            "placeholder_files": {},
+            "completed": true,
+            "session_id": null,
+            "metadata": null
+        },
+        {
+            "sample_id": "WT EGD 6hpi 091219 07",
+            "target_version": "all",
+            "status": {
+                "sample_id": "WT EGD 6hpi 091219 07",
+                "users": {
+                    "auth0|6091401e7041550068ed3421": 0
+                },
+                "actions": [
+                    {
+                        "session_id": "WT EGD 6hpi 091219 07@v1",
+                        "target_version": "v1",
+                        "task_id": "actin-comet-tail",
+                        "sample_id": "WT EGD 6hpi 091219 07",
+                        "user_id": "auth0|6091401e7041550068ed3421",
+                        "user_email": "yifeng-zhang@uiowa.edu",
+                        "expires_at": 1620149415,
+                        "started_at": 1620145815,
+                        "completed": true,
+                        "completed_at": "04/05/2021 16:44:18",
+                        "metadata": null
+                    }
+                ],
+                "completed": true,
+                "completed_at": "04/05/2021 16:44:18"
+            },
+            "input_files": {
+                "image.png": "https://imjoy-s3.pasteur.fr/imjoy/actin-comet-tail/WT%20EGD%206hpi%20091219%2007/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=imjoy%2F20210619%2FEU%2Fs3%2Faws4_request&X-Amz-Date=20210619T201946Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=a259b9221fc17eb72bf192303bef29625d29099ea3384655a9949837c7cb00c4"
+            },
+            "target_files": {
+                "annotation.json": {
+                    "v1": "https://imjoy-s3.pasteur.fr/imjoy/actin-comet-tail/WT%20EGD%206hpi%20091219%2007/actin-comet-tail/v1/annotation.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=imjoy%2F20210619%2FEU%2Fs3%2Faws4_request&X-Amz-Date=20210619T201946Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=7ea1963afe26511a989b64af0fc8cf4ce9c2908af547b4c68680d072c6532ba9"
+                }
+            },
+            "placeholder_files": {},
+            "completed": true,
+            "session_id": null,
+            "metadata": null
+        },
+        {
+            "sample_id": "KI EGD 6hpi 081419 07",
+            "target_version": "all",
+            "status": {
+                "sample_id": "KI EGD 6hpi 081419 07",
+                "users": {
+                    "auth0|6091401e7041550068ed3421": 0
+                },
+                "actions": [
+                    {
+                        "session_id": "KI EGD 6hpi 081419 07@v1",
+                        "target_version": "v1",
+                        "task_id": "actin-comet-tail",
+                        "sample_id": "KI EGD 6hpi 081419 07",
+                        "user_id": "auth0|6091401e7041550068ed3421",
+                        "user_email": "yifeng-zhang@uiowa.edu",
+                        "expires_at": 1620668175,
+                        "started_at": 1620664575,
+                        "completed": true,
+                        "completed_at": "10/05/2021 16:38:26",
+                        "metadata": null
+                    }
+                ],
+                "completed": true,
+                "completed_at": "10/05/2021 16:38:26"
+            },
+            "input_files": {
+                "image.png": "https://imjoy-s3.pasteur.fr/imjoy/actin-comet-tail/KI%20EGD%206hpi%20081419%2007/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=imjoy%2F20210619%2FEU%2Fs3%2Faws4_request&X-Amz-Date=20210619T201949Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=7ce71940f10686f04f211e3697402c611e6aa4e4e12104632ea14856408e3398"
+            },
+            "target_files": {
+                "annotation.json": {
+                    "v1": "https://imjoy-s3.pasteur.fr/imjoy/actin-comet-tail/KI%20EGD%206hpi%20081419%2007/actin-comet-tail/v1/annotation.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=imjoy%2F20210619%2FEU%2Fs3%2Faws4_request&X-Amz-Date=20210619T201949Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d6b1289e1e005486f490139beb2a29bf85765c8164a7ca87c45c4b997b7d42b1"
+                }
+            },
+            "placeholder_files": {},
+            "completed": true,
+            "session_id": null,
+            "metadata": null
+        }
+    ]
+}

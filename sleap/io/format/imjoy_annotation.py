@@ -17,6 +17,7 @@ import re
 import json
 
 import numpy as np
+from numpy.lib.twodim_base import flipud
 import pandas as pd
 
 from typing import List, Optional
@@ -81,7 +82,7 @@ class LabelsImJoyAdaptor(Adaptor):
         )
 
     @classmethod
-    def make_video_for_image_list(cls, image_dir, filenames) -> Video:
+    def make_video_for_image_list(cls, image_dir, filenames, flipud, channel_index) -> Video:
         """Creates a Video object from frame images."""
 
         # the image filenames in the csv may not match where the user has them
@@ -94,7 +95,7 @@ class LabelsImJoyAdaptor(Adaptor):
 
         filenames = list(map(lambda f: fix_img_path(image_dir, f), filenames))
 
-        return Video.from_image_filenames(filenames)
+        return Video.from_image_filenames(filenames, flipud=flipud, channel_index=channel_index)
 
     @classmethod
     def read_frames(
@@ -121,11 +122,12 @@ class LabelsImJoyAdaptor(Adaptor):
 
         # Get list of all images filenames.
         samples = data["samples"]
+        config = data["config"]
 
         img_files = [os.path.join(s["sample_id"], 'image.png') for s in samples]
         # Create the Video object
         img_dir = os.path.dirname(filename)
-        video = cls.make_video_for_image_list(img_dir, img_files)
+        video = cls.make_video_for_image_list(img_dir, img_files, config.get('flipud', False), config.get('channel_index', None))
 
         lfs = []
         for i in range(len(samples)):
