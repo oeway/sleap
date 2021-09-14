@@ -24,8 +24,14 @@ cfg.data.labels.validation_labels = "/data/wei/actin-comet-tail/valid/manifest.j
 # Preprocesssing and training parameters.
 cfg.data.instance_cropping.center_on_part = "5"
 cfg.optimization.augmentation_config.rotate = True
+cfg.optimization.augmentation_config.random_flip = 'horizontal'
+cfg.optimization.augmentation_config.contrast = True
+cfg.optimization.augmentation_config.scale = True
+cfg.optimization.augmentation_config.uniform_noise = True
+cfg.optimization.augmentation_config.brightness = True
+cfg.optimization.augmentation_config.gaussian_noise = True
 cfg.optimization.hard_keypoint_mining.online_mining = False
-cfg.optimization.epochs = 50  # This is the maximum number of training rounds.
+cfg.optimization.epochs = 10000 # This is the maximum number of training rounds.
 
 # These configures the actual neural network and the model type:
 cfg.model.backbone.unet = UNetConfig(

@@ -4,7 +4,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = ""
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 from sleap.nn.inference import TopDownPredictor
 
-model_dir = './models/baseline_model.topdown_1'
+model_dir = './models/baseline_model.topdown_4'
 predictor = TopDownPredictor.from_trained_models(
     confmap_model_path=model_dir
 )

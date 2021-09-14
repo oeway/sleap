@@ -810,9 +810,11 @@ class SingleImageVideo:
         if self.flipud:
             img = np.flipud(img)
 
-        if self.channel_index is not None:
+        if type(self.channel_index) is int:
             img = np.stack([img[:, :, self.channel_index]]*3, axis=-1)
-        
+        elif isinstance(self.channel_index, list):
+            img = np.stack([img[:, :, i] for i in self.channel_index], axis=-1)
+
         if img.shape[2] == 3:
             # OpenCV channels are in BGR order, so we should convert to RGB
             img = img[:, :, ::-1]
